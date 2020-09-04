@@ -35,12 +35,28 @@
                                     <action selector="toggleTrackingWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="429-r4-LrR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUV-tI-zlA">
+                                <rect key="frame" x="321" y="722" width="34" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBn-5W-B8J">
+                                <rect key="frame" x="309" y="744" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iBn-5W-B8J" secondAttribute="trailing" constant="20" id="BX6-t7-zCf"/>
                             <constraint firstItem="nNu-LQ-4jF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Gg1-77-ngu"/>
                             <constraint firstItem="nds-an-uFf" firstAttribute="top" secondItem="nNu-LQ-4jF" secondAttribute="bottom" priority="950" constant="20" id="H6U-de-IPc"/>
+                            <constraint firstItem="iBn-5W-B8J" firstAttribute="top" secondItem="dUV-tI-zlA" secondAttribute="bottom" constant="4" id="JNI-IF-eAU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nNu-LQ-4jF" secondAttribute="trailing" constant="20" id="Mk9-7H-NgP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dUV-tI-zlA" secondAttribute="trailing" constant="20" id="N6c-Qe-rll"/>
+                            <constraint firstItem="dUV-tI-zlA" firstAttribute="top" secondItem="nNu-LQ-4jF" secondAttribute="bottom" constant="8" id="o05-0G-v5G"/>
                             <constraint firstItem="nds-an-uFf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ovh-gA-bHn"/>
                             <constraint firstItem="nNu-LQ-4jF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="s3h-sE-K2d"/>
                             <constraint firstItem="nds-an-uFf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xGz-fg-WVD"/>
@@ -50,6 +66,7 @@
                     <connections>
                         <outlet property="mapView" destination="nNu-LQ-4jF" id="PLv-J5-26d"/>
                         <outlet property="startMappingButton" destination="nds-an-uFf" id="fbf-OE-A4N"/>
+                        <outlet property="travelTimeLabel" destination="iBn-5W-B8J" id="CnV-R7-6kq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

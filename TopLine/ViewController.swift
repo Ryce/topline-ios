@@ -13,12 +13,14 @@ class ViewController: UIViewController {
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var startMappingButton: UIButton!
+    @IBOutlet var travelTimeLabel: UILabel!
     
     private lazy var plottingService: PlottingService = {
         let service = PlottingService()
         service.delegate = self
         return service
     }()
+    
     private var locationService: LocationService = LocationService()
     
     @IBAction func toggleTracking(sender: UIButton) {
@@ -59,6 +61,7 @@ extension ViewController: PlottingDelegate {
                                             longitudinalMeters: distance)
             mapView.setRegion(region, animated: true)
         }
+        self.travelTimeLabel.text = plottingService.travelDuration.localizedString
     }
     
 }
@@ -71,4 +74,18 @@ extension ViewController: MKMapViewDelegate {
         polyLineRenderer.lineWidth = 4.0
         return polyLineRenderer
     }
+}
+
+extension TimeInterval {
+    
+    var localizedString: String {
+        let time = NSInteger(self)
+        
+        let seconds = time % 60
+        let minutes = (time / 60) % 60
+        let hours = (time / 3600)
+        
+        return String(format: "%0.2d:%0.2d:%0.2d", hours, minutes, seconds)
+    }
+    
 }

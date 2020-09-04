@@ -25,6 +25,9 @@ class PlottingService {
     }
     
     var travelDuration: TimeInterval {
+        /// TODO: To properly calculate the actual time stamp, we need to distinguish tracked sections. A simple array
+        /// of coordinates does not do the trick here, with more time, I would further break down each 'start/stop' action into a section
+        /// in order to distinguish them and then calculate each timeInterval between the sections and add them up
         guard locationHistory.count >= 2 else { return 0 }
         return sorted.last!.timestamp.distance(to: sorted.first!.timestamp)
     }
