@@ -13,6 +13,8 @@
 		DAB9CA78250111DA00C799E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB9CA76250111DA00C799E5 /* Main.storyboard */; };
 		DAB9CA7A250111DB00C799E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB9CA79250111DB00C799E5 /* Assets.xcassets */; };
 		DAB9CA7D250111DB00C799E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB9CA7B250111DB00C799E5 /* LaunchScreen.storyboard */; };
+		DAB9CA86250113A300C799E5 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB9CA85250113A300C799E5 /* LocationService.swift */; };
+		DAB9CA88250114D100C799E5 /* PlottingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB9CA87250114D100C799E5 /* PlottingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DAB9CA79250111DB00C799E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAB9CA7C250111DB00C799E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAB9CA7E250111DB00C799E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB9CA85250113A300C799E5 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		DAB9CA87250114D100C799E5 /* PlottingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlottingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		DAB9CA6F250111DA00C799E5 /* TopLine */ = {
 			isa = PBXGroup;
 			children = (
+				DAB9CA842501139800C799E5 /* Model */,
 				DAB9CA70250111DA00C799E5 /* AppDelegate.swift */,
 				DAB9CA72250111DA00C799E5 /* SceneDelegate.swift */,
 				DAB9CA74250111DA00C799E5 /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				DAB9CA7E250111DB00C799E5 /* Info.plist */,
 			);
 			path = TopLine;
+			sourceTree = "<group>";
+		};
+		DAB9CA842501139800C799E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAB9CA85250113A300C799E5 /* LocationService.swift */,
+				DAB9CA87250114D100C799E5 /* PlottingService.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +154,8 @@
 			files = (
 				DAB9CA75250111DA00C799E5 /* ViewController.swift in Sources */,
 				DAB9CA71250111DA00C799E5 /* AppDelegate.swift in Sources */,
+				DAB9CA86250113A300C799E5 /* LocationService.swift in Sources */,
+				DAB9CA88250114D100C799E5 /* PlottingService.swift in Sources */,
 				DAB9CA73250111DA00C799E5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 426N58MG75;
 				INFOPLIST_FILE = TopLine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 426N58MG75;
 				INFOPLIST_FILE = TopLine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
